@@ -1,10 +1,13 @@
-import time
+from time import sleep
 import pyautogui as pg
-time_start = time.time()
+start_pos = pg.position()
 print('Running auto_key')
 while True:
-    time_end = time.time()
-    if time_end - time_start > 300:
+    sleep(300)
+    end_pos = pg.position()
+    if start_pos == end_pos:
         pg.keyDown('ctrl')
         pg.keyUp('ctrl')
-        time_start = time.time()
+        print('Push ctrl Key!')
+    else:
+        start_pos = pg.position()
