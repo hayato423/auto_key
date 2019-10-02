@@ -3,7 +3,7 @@ import pyautogui as pg
 start_pos = pg.position()
 print('Running auto_key')
 while True:
-    sleep(300)
+    sleep(30)
     end_pos = pg.position()
     if start_pos == end_pos:
         pg.keyDown('ctrl')
